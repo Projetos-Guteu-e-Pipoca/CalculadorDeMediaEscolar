@@ -194,11 +194,48 @@ function calcular() {
     var notaGeo = ((adGeo * 5) + (((ap1Geo + ap2Geo + ap3Geo) / 1.2) * 3) + (avEnemGeo * 1) + (folhaAzGeo*1)) / 10
     var notaCie = (((adBio + adFis + adQui) / 3 * 5) + (((ap1Cie + ap2Cie + ap3Cie) / 1.2) * 3) + (avEnemCie * 1) + (folhaAzCie*1)) / 10
 
-    inpNotaArtes.innerText = notaArtes
-    inpNotaRed.innerText = notaRed
-    inpNotaPort.innerText = notaPort
-    inpNotaMat.innerText = notaMat
-    inpNotaHist.innerText = notaHist
-    inpNotaGeo.innerText = notaGeo
+    //artes
+    if (notaArtes >= 6){
+        inpNotaArtes.innerHTML = `<span style="color: green;">${notaArtes}</span>`
+    } else{
+        inpNotaArtes.innerHTML = `<span style="color: red;">${notaArtes}</span>`
+    }
+
+    //redação
+    if (notaArtes >= 6){
+        inpNotaRed.innerHTML = `<span style="color: green;">${notaRed}</span>`
+    } else{
+        inpNotaRed.innerHTML = `<span style="color: red;">${notaRed}</span>`
+    }
+    //portugues
+    if (notaPort >= 6){
+        inpNotaPort.innerHTML = `<span style="color: green;">${notaPort}</span>`
+    } else{
+        inpNotaPort.innerHTML = `<span style="color: red;">${notaPort}</span>`
+    }
+    //matematica
+    if (notaMat >= 6){
+        inpNotaMat.innerHTML = `<span style="color: green;">${notaMat}</span>`
+    } else{
+        inpNotaMat.innerHTML = `<span style="color: red;">${notaMat}</span>`
+    }
+    //historia
+    if (notaHist >= 6){
+        inpNotaHist.innerHTML = `<span style="color: green;">${notaHist}</span>`
+    } else{
+        inpNotaHist.innerHTML = `<span style="color: red;">${notaHist}</span>`
+    }
+    //geografia
+    if (notaGeo >= 6){
+        inpNotaGeo.innerHTML = `<span style="color: green;">${notaGeo}</span>`
+    } else{
+        inpNotaGeo.innerHTML = `<span style="color: red;">${notaGeo}</span>`
+    }
+    //ciencias
+    if (notaCie >= 6){
+        inpNotaCie.innerHTML = `<span style="color: green;">${notaCie}</span>`
+    } else{
+        inpNotaCie.innerHTML = `<span style="color: red;">${notaCie}</span>`
+    }
     inpNotaCie.innerText = notaCie
 }

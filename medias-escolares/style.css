@@ -34,6 +34,11 @@ h1 {
     border: 3px solid black;
 }
 
+div.caixaContato h1{
+    font-size: 35px;
+    margin: 0%;
+}
+
 .caixaEscolhas {
     background-color: gray;
     width: 70%;
