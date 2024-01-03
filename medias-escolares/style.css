@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+:root {
+    --cor-link: #0000EE;
+}
+
+body {
+    background-color: rgb(188, 188, 188);
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: var(--cor-link);
+}
+
+button {
+    font-size: 25px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.caixaContato {
+    text-align: left;
+    display: inline-block;
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.caixaEscolhas {
+    background-color: gray;
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin: auto;
+}
+
+div.caixaEscolhas a {
+    font-size: 30px;
+    display: inline-block;
+    background-color: rgb(174, 174, 174);
+    padding: 3px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.tabelaResponsiva {
+    overflow-x: auto;
+}
