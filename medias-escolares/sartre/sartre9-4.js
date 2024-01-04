@@ -184,7 +184,7 @@ function confirmar() {
     inpNotaGeo = document.getElementById('notaGeo')
     inpNotaCie = document.getElementById('notaCie')
 }
-function calcular() {
+function calcular4() {
     confirmar()
     var notaArtes = Atv1Artes + Atv2Artes
     var notaRed = ((Atv1Red * 5) + (Atv2Red * 4) + (projetoLeitura1 * 1)) / 10
@@ -196,46 +196,45 @@ function calcular() {
 
     //artes
     if (notaArtes >= 6){
-        inpNotaArtes.innerHTML = `<span style="color: green;">${notaArtes}</span>`
+        inpNotaArtes.innerHTML = `<span style="color: green;">${notaArtes.toFixed(2)}</span>`
     } else{
-        inpNotaArtes.innerHTML = `<span style="color: red;">${notaArtes}</span>`
+        inpNotaArtes.innerHTML = `<span style="color: red;">${notaArtes.toFixed(2)}</span>`
     }
 
     //redação
-    if (notaArtes >= 6){
-        inpNotaRed.innerHTML = `<span style="color: green;">${notaRed}</span>`
+    if (notaRed >= 6){
+        inpNotaRed.innerHTML = `<span style="color: green;">${notaRed.toFixed(2)}</span>`
     } else{
-        inpNotaRed.innerHTML = `<span style="color: red;">${notaRed}</span>`
+        inpNotaRed.innerHTML = `<span style="color: red;">${notaRed.toFixed(2)}</span>`
     }
     //portugues
     if (notaPort >= 6){
-        inpNotaPort.innerHTML = `<span style="color: green;">${notaPort}</span>`
+        inpNotaPort.innerHTML = `<span style="color: green;">${notaPort.toFixed(2)}</span>`
     } else{
-        inpNotaPort.innerHTML = `<span style="color: red;">${notaPort}</span>`
+        inpNotaPort.innerHTML = `<span style="color: red;">${notaPort.toFixed(2)}</span>`
     }
     //matematica
     if (notaMat >= 6){
-        inpNotaMat.innerHTML = `<span style="color: green;">${notaMat}</span>`
+        inpNotaMat.innerHTML = `<span style="color: green;">${notaMat.toFixed(2)}</span>`
     } else{
-        inpNotaMat.innerHTML = `<span style="color: red;">${notaMat}</span>`
+        inpNotaMat.innerHTML = `<span style="color: red;">${notaMat.toFixed(2)}</span>`
     }
     //historia
     if (notaHist >= 6){
-        inpNotaHist.innerHTML = `<span style="color: green;">${notaHist}</span>`
+        inpNotaHist.innerHTML = `<span style="color: green;">${notaHist.toFixed(2)}</span>`
     } else{
-        inpNotaHist.innerHTML = `<span style="color: red;">${notaHist}</span>`
+        inpNotaHist.innerHTML = `<span style="color: red;">${notaHist.toFixed(2)}</span>`
     }
     //geografia
     if (notaGeo >= 6){
-        inpNotaGeo.innerHTML = `<span style="color: green;">${notaGeo}</span>`
+        inpNotaGeo.innerHTML = `<span style="color: green;">${notaGeo.toFixed(2)}</span>`
     } else{
-        inpNotaGeo.innerHTML = `<span style="color: red;">${notaGeo}</span>`
+        inpNotaGeo.innerHTML = `<span style="color: red;">${notaGeo.toFixed(2)}</span>`
     }
     //ciencias
     if (notaCie >= 6){
-        inpNotaCie.innerHTML = `<span style="color: green;">${notaCie}</span>`
+        inpNotaCie.innerHTML = `<span style="color: green;">${notaCie.toFixed(2)}</span>`
     } else{
-        inpNotaCie.innerHTML = `<span style="color: red;">${notaCie}</span>`
+        inpNotaCie.innerHTML = `<span style="color: red;">${notaCie.toFixed(2)}</span>`
     }
-    inpNotaCie.innerText = notaCie
 }
