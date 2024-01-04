@@ -74,14 +74,16 @@
             </div>
         </aside>
         <section>
-            <div class="centralizado">
-                <h1>Qual é a unidade que você quer calcular a média?</h1>
-            </div>
-            <div class="centralizado" onchange="unidade()">
-                <input type="radio" name="unidade" id="unidade2" checked>
-                <label for="unidade2">2 unidade</label>
-                <input type="radio" name="unidade" id="unidade4">
-                <label for="unidade2">4 unidade</label>
+            <div class="centralizado caixaUnidades">
+                <h1>Qual é a unidade do 9 Ano que você quer calcular a média?</h1>        
+                <div class="centralizado" onchange="unidade()">
+                    <input type="radio" name="unidade" id="unidade2" checked>
+                    <label for="unidade2">2 unidade</label>
+                    <div>
+                        <input type="radio" name="unidade" id="unidade4">
+                        <label for="unidade4">4 unidade</label>
+                    </div>
+                </div>
             </div>
         </section>
         <div id="ano9-2">
@@ -250,7 +252,7 @@
             </section>
             <script src="sartre9-2.js"></script>
         </div>
-        <div id="ano9-4">
+        <div id="ano9-4" style="display: none;">
             <section>
                 <div class="tabelaResponsiva">
                     <div class="centralizado">
