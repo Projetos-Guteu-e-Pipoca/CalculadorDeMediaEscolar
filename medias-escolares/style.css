@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(188, 188, 188);
+    background-color: rgb(0, 102, 0);
 }
 
 section {
@@ -55,6 +55,14 @@ header h1 {
 div.caixaContato h1{
     font-size: 40px;
     margin: 0%;
+}
+
+div.caixaContato h2{
+    margin: 0;
+}
+
+div.caixaContato li{
+    margin-top: 5px;
 }
 
 .caixaEscolhas {

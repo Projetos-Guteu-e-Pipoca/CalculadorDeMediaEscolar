@@ -26,12 +26,16 @@
             display: inline-block;
         }
 
+        div.caixaUnidades div div{
+            margin-top: 10px;
+        }
+
         aside {
             text-align: right;
         }
 
         body {
-            background-color: rgb(238, 174, 54);
+            background-color: rgb(255, 255, 255);
             background-image: url(../5719387.jpg);
             background-size: contain;
         }
@@ -81,8 +85,10 @@
             <div class="centralizado caixaUnidades">
                 <h1>Qual é a unidade do 9 Ano que você quer calcular a média?</h1>        
                 <div class="centralizado" onchange="unidade()">
-                    <input type="radio" name="unidade" id="unidade2" checked>
-                    <label for="unidade2">2 unidade</label>
+                    <div>
+                        <input type="radio" name="unidade" id="unidade2" checked>
+                        <label for="unidade2">2 unidade</label>
+                    </div>
                     <div>
                         <input type="radio" name="unidade" id="unidade4">
                         <label for="unidade4">4 unidade</label>

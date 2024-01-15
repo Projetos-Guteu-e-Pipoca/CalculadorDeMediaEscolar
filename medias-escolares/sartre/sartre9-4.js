@@ -1,5 +1,4 @@
-//pode fazer uma lista ao invez de varias variaveis mas eu esqueci disso na hora
-//talvez dê para diminuir a quantidade de variaveis
+//BE CAREFULL! SHITTY CODE AHEAD:
 var inpAdBio = document.getElementById('adBio')
 var adBio = Number(inpAdBio.value)
 var inpAdFis = document.getElementById('adFis')
@@ -91,6 +90,381 @@ var inpNotaMat = document.getElementById('notaMat')
 var inpNotaHist = document.getElementById('notaHist')
 var inpNotaGeo = document.getElementById('notaGeo')
 var inpNotaCie = document.getElementById('notaCie')
+function max(){
+    if (adBio > 10){
+        adBio = 10
+        inpAdBio.value = 10
+    }
+    if (adFis > 10){
+        adFis = 10
+        inpAdFis.value = 10
+    }
+    if (adQui > 10){
+        adQui = 10
+        inpAdQui.value = 10
+    }
+
+    if (Atv1Artes > 5){
+        Atv1Artes = 5
+        inpAtv1Artes.value = 5
+    }
+    if (Atv2Artes > 5){
+        Atv2Artes = 5
+        inpAtv2Artes.value = 5
+    }
+
+    if (projetoLeitura1 > 10){
+        projetoLeitura1 = 10
+        inpProjetoLeitura1.value = 10
+    }
+
+    if (Atv1Red > 10){
+        Atv1Red = 10
+        inpAtv1Red.value = 10
+    }
+    if (Atv2Red > 10){
+        Atv2Red = 10
+        inpAtv2Red.value = 10
+    }
+
+    if (adPort > 10){
+        adPort = 10
+        inpAdPort.value = 10
+    }
+    if (ap1Port > 4){
+        ap1Port = 4
+        inpAp1Port.value = 4
+    }
+    if (ap2Port > 4){
+        ap2Port = 4
+        inpAp2Port.value = 4
+    }
+    if (ap3Port > 4){
+        ap3Port = 4
+        inpAp3Port.value = 4
+    }
+    if (avEnemPort > 10){
+        avEnemPort = 10
+        inpAvEnemPort.value = 10
+    }
+    if (folhaAzPort > 10){
+        folhaAzPort = 10
+        inpFolhaAzPort.value = 10
+    }
+    if (projetoLeitura2 > 10){
+        projetoLeitura2 = 10
+        inpProjetoLeitura2.value = 10
+    }
+
+    if (adMat > 10){
+        adMat = 10
+        inpAdMat.value = 10
+    }
+    if (ap1Mat > 4){
+        ap1Mat = 4
+        inpAp1Mat.value = 4
+    }
+    if (ap2Mat > 4){
+        ap2Mat = 4
+        inpAp2Mat.value = 4
+    }
+    if (ap3Mat > 4){
+        ap3Mat = 4
+        inpAp3Mat.value = 4
+    }
+    if (avEnemMat > 10){
+        avEnemMat = 10
+        inpAvEnemMat.value = 10
+    }
+    if (folhaAzMat > 10){
+        folhaAzMat = 10
+        inpFolhaAzMat.value = 10
+    }
+
+    if (adHist > 10){
+        adHist = 10
+        inpAdHist.value = 10
+    }
+    if (ap1Hist > 4){
+        ap1Hist = 4
+        inpAp1Hist.value = 4
+    }
+    if (ap2Hist > 4){
+        ap2Hist = 4
+        inpAp2Hist.value = 4
+    }
+    if (ap3Hist > 4){
+        ap3Hist = 4
+        inpAp3Hist.value = 4
+    }
+    if (avEnemHist > 10){
+        avEnemHist = 10
+        inpAvEnemHist.value = 10
+    }
+    if (folhaAzHist > 10){
+        folhaAzHist = 10
+        inpFolhaAzHist.value = 10
+    }
+
+    if (adHist > 10){
+        adHist = 10
+        inpAdHist.value = 10
+    }
+    if (ap1Hist > 4){
+        ap1Hist = 4
+        inpAp1Hist.value = 4
+    }
+    if (ap2Hist > 4){
+        ap2Hist = 4
+        inpAp2Hist.value = 4
+    }
+    if (ap3Hist > 4){
+        ap3Hist = 4
+        inpAp3Hist.value = 4
+    }
+    if (avEnemHist > 10){
+        avEnemHist = 10
+        inpAvEnemHist.value = 10
+    }
+    if (folhaAzHist > 10){
+        folhaAzHist = 10
+        inpFolhaAzHist.value = 10
+    }
+
+    if (adGeo > 10){
+        adGeo = 10
+        inpAdGeo.value = 10
+    }
+    if (ap1Geo > 4){
+        ap1Geo = 4
+        inpAp1Geo.value = 4
+    }
+    if (ap2Geo > 4){
+        ap2Geo = 4
+        inpAp2Geo.value = 4
+    }
+    if (ap3Geo > 4){
+        ap3Geo = 4
+        inpAp3Geo.value = 4
+    }
+    if (avEnemGeo > 10){
+        avEnemGeo = 10
+        inpAvEnemGeo.value = 10
+    }
+    if (folhaAzGeo > 10){
+        folhaAzGeo = 10
+        inpFolhaAzGeo.value = 10
+    } 
+
+    if (ap1Cie > 4){
+        ap1Cie = 4
+        inpAp1Cie.value = 4
+    }
+    if (ap2Cie > 4){
+        ap2Cie = 4
+        inpAp2Cie.value = 4
+    }
+    if (ap3Cie > 4){
+        ap3Cie = 4
+        inpAp3Cie.value = 4
+    }
+    if (avEnemCie > 10){
+        avEnemCie = 10
+        inpAvEnemCie.value = 10
+    }
+    if (folhaAzCie > 10){
+        folhaAzCie = 10
+        inpFolhaAzCie.value = 10
+    } 
+}
+function min(){
+    if (adBio < 0){
+        adBio = 0
+        inpAdBio.value = 0
+    }
+    if (adFis < 0){
+        adFis = 0
+        inpAdFis.value = 0
+    }
+    if (adQui < 0){
+        adQui = 0
+        inpAdQui.value = 0
+    }
+
+    if (Atv1Artes < 0){
+        Atv1Artes = 0
+        inpAtv1Artes.value = 0
+    }
+    if (Atv2Artes < 0){
+        Atv2Artes = 0
+        inpAtv2Artes.value = 0
+    }
+
+    if (projetoLeitura1 < 0){
+        projetoLeitura1 = 0
+        inpProjetoLeitura1.value = 0
+    }
+
+    if (Atv1Red < 0){
+        Atv1Red = 0
+        inpAtv1Red.value = 0
+    }
+    if (Atv2Red < 0){
+        Atv2Red = 0
+        inpAtv2Red.value = 0
+    }
+
+    if (adPort < 0){
+        adPort = 0
+        inpAdPort.value = 0
+    }
+    if (ap1Port < 0){
+        ap1Port = 0
+        inpAp1Port.value = 0
+    }
+    if (ap2Port < 0){
+        ap2Port = 0
+        inpAp2Port.value = 0
+    }
+    if (ap3Port < 0){
+        ap3Port = 0
+        inpAp3Port.value = 0
+    }
+    if (avEnemPort < 0){
+        avEnemPort = 0
+        inpAvEnemPort.value = 0
+    }
+    if (folhaAzPort < 0){
+        folhaAzPort = 0
+        inpFolhaAzPort.value = 0
+    }
+    if (projetoLeitura2 < 0){
+        projetoLeitura2 = 0
+        inpProjetoLeitura2.value = 0
+    }
+
+    if (adMat < 10){
+        adMat = 0
+        inpAdMat.value = 0
+    }
+    if (ap1Mat < 4){
+        ap1Mat = 0
+        inpAp1Mat.value = 0
+    }
+    if (ap2Mat < 4){
+        ap2Mat = 0
+        inpAp2Mat.value = 0
+    }
+    if (ap3Mat < 4){
+        ap3Mat = 0
+        inpAp3Mat.value = 0
+    }
+    if (avEnemMat < 10){
+        avEnemMat = 0
+        inpAvEnemMat.value = 0
+    }
+    if (folhaAzMat < 10){
+        folhaAzMat = 0
+        inpFolhaAzMat.value = 0
+    }
+    
+    if (adHist < 10){
+        adHist = 0
+        inpAdHist.value = 0
+    }
+    if (ap1Hist < 4){
+        ap1Hist = 0
+        inpAp1Hist.value = 0
+    }
+    if (ap2Hist < 4){
+        ap2Hist = 0
+        inpAp2Hist.value = 0
+    }
+    if (ap3Hist < 4){
+        ap3Hist = 0
+        inpAp3Hist.value = 0
+    }
+    if (avEnemHist < 10){
+        avEnemHist = 0
+        inpAvEnemHist.value = 0
+    }
+    if (folhaAzHist < 10){
+        folhaAzHist = 0
+        inpFolhaAzHist.value = 0
+    }
+    
+    if (adHist < 10){
+        adHist = 0
+        inpAdHist.value = 0
+    }
+    if (ap1Hist < 4){
+        ap1Hist = 0
+        inpAp1Hist.value = 0
+    }
+    if (ap2Hist < 4){
+        ap2Hist = 0
+        inpAp2Hist.value = 0
+    }
+    if (ap3Hist < 4){
+        ap3Hist = 0
+        inpAp3Hist.value = 0
+    }
+    if (avEnemHist < 10){
+        avEnemHist = 0
+        inpAvEnemHist.value = 0
+    }
+    if (folhaAzHist < 10){
+        folhaAzHist = 0
+        inpFolhaAzHist.value = 0
+    }
+    
+    if (adGeo < 10){
+        adGeo = 0
+        inpAdGeo.value = 0
+    }
+    if (ap1Geo < 4){
+        ap1Geo = 0
+        inpAp1Geo.value = 0
+    }
+    if (ap2Geo < 4){
+        ap2Geo = 0
+        inpAp2Geo.value = 0
+    }
+    if (ap3Geo < 4){
+        ap3Geo = 0
+        inpAp3Geo.value = 0
+    }
+    if (avEnemGeo < 10){
+        avEnemGeo = 0
+        inpAvEnemGeo.value = 0
+    }
+    if (folhaAzGeo < 10){
+        folhaAzGeo = 0
+        inpFolhaAzGeo.value = 0
+    } 
+    
+    if (ap1Cie < 0){
+        ap1Cie = 0
+        inpAp1Cie.value = 0
+    }
+    if (ap2Cie < 0){
+        ap2Cie = 0
+        inpAp2Cie.value = 0
+    }
+    if (ap3Cie < 0){
+        ap3Cie = 0
+        inpAp3Cie.value = 0
+    }
+    if (avEnemCie < 0){
+        avEnemCie = 0
+        inpAvEnemCie.value = 0
+    }
+    if (folhaAzCie < 0){
+        folhaAzCie = 0
+        inpFolhaAzCie.value = 0
+    } 
+}//This code is so shitty that I want to kil myself after reading it and I feel bad for the person to correct it if there is a bug (from the devs)
+
 function confirmar() {
     inpAdBio = document.getElementById('adBio')
     adBio = Number(inpAdBio.value)
@@ -183,6 +557,8 @@ function confirmar() {
     inpNotaHist = document.getElementById('notaHist')
     inpNotaGeo = document.getElementById('notaGeo')
     inpNotaCie = document.getElementById('notaCie')
+    max()
+    min()
 }
 function calcular4() {
     confirmar()
