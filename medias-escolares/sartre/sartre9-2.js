@@ -1,4 +1,4 @@
-//Be Carefull super clean code ahead
+//Be Carefull a normal code ahead
 
 function num_max(x, y){
     if (y<Number(x.value)){
@@ -23,6 +23,8 @@ function calcular_artes(){
     }else{
         a.innerHTML = `<span style="color: red;">${r.toFixed(2)}</span>`
     }
+    return r
+
 }
 function calcular_redacao(){
     var pl = document.getElementById("projetoLeitura1-2")
@@ -40,6 +42,7 @@ function calcular_redacao(){
     }else{
         red.innerHTML = `<span style="color: red;">${r.toFixed(2)}</span>`
     }
+    return r
 }
 function calcular_port(){
     var ad = document.getElementById("adPort-2")
@@ -63,6 +66,7 @@ function calcular_port(){
     }else{
         port.innerHTML = `<span style="color: red;">${r.toFixed(2)}</span>`
     }
+    return r
 }   
 function calcular_mat(){
     var mat = document.getElementById("notaMat-2")
@@ -84,6 +88,7 @@ function calcular_mat(){
     }else{
         mat.innerHTML = `<span style="color: red;">${r.toFixed(2)}</span>`
     }
+    return r
 }
 function calcular_hist(){
     var hist = document.getElementById("notaHist-2")
@@ -105,6 +110,7 @@ function calcular_hist(){
     }else{
         hist.innerHTML = `<span style="color: red;">${r.toFixed(2)}</span>`
     }
+    return r
 }
 
 function calcular_geo(){
@@ -127,6 +133,7 @@ function calcular_geo(){
     }else{
         geo.innerHTML = `<span style="color: red;">${r.toFixed(2)}</span>`
     }
+    return r
 }
 
 function calcular_cie(){
@@ -156,16 +163,95 @@ function calcular_cie(){
     }else{
         cie.innerHTML = `<span style="color: red;">${r.toFixed(2)}</span>`
     }
+    return r
 }
 
 function calcular(){
-    calcular_artes()
-    calcular_redacao()
-    calcular_port()
-    calcular_mat()
-    calcular_hist()
-    calcular_geo()
-    calcular_cie()
+    all_r = []
+    all_r[0] = calcular_artes()
+    all_r[1] = calcular_redacao()
+    all_r[2] = calcular_port()
+    all_r[3] = calcular_mat()
+    all_r[4] = calcular_hist()
+    all_r[5] = calcular_geo()
+    all_r[6] = calcular_cie()
+    for (var i=0; i<pp.length; i++){
+        pp[i].innerHTML = `<td>${(all_r[i]*3).toFixed(2)}</td>`
+    }
+    for (var i=0; i < og_color.length; i++){
+        og_element[i].style.backgroundColor = og_color[i]
+    }
+    og_color = []
+    og_element = []
+    n = 0
 }
 
+const pp = document.getElementsByClassName("pp")
 
+const inputNota2U = document.getElementsByClassName('inputNota2U')
+
+og_color = []
+og_element = []
+n = 0
+
+
+for (var i = 0; i < inputNota2U.length; i++) {
+    inputNota2U[i].addEventListener("change", function() {
+        if (Number(this.value)>10){
+            this.value = 10
+            og_color[n] = this.style.backgroundColor
+            og_element[n] = this
+            this.style.backgroundColor = "red"
+            n++
+        }
+        if (Number(this.value)<0){
+            this.value = 0
+            og_color[n] = this.style.backgroundColor
+            og_element[n] = this
+            this.style.backgroundColor = "red"
+            n++
+        }
+    })
+}
+
+const inputNota2U_M4 = document.getElementsByClassName("inputNota2U_M-4")
+
+for (var i = 0; i < inputNota2U_M4.length; i++) {
+    inputNota2U_M4[i].addEventListener("change", function() {
+        if (Number(this.value)>4){
+            this.value = 4
+            og_color[n] = this.style.backgroundColor
+            og_element[n] = this
+            this.style.backgroundColor = "red"
+            n++
+        }
+        if (Number(this.value)<0){
+            this.value = 0
+            og_color[n] = this.style.backgroundColor
+            og_element[n] = this
+            this.style.backgroundColor = "red"
+            n++
+        }
+    })
+}
+
+const inputNota2U_M5 = document.getElementsByClassName("inputNota2U_M-5")
+
+for (var i = 0; i < inputNota2U_M5.length; i++) {
+    inputNota2U_M5[i].addEventListener("change", function() {
+        if (Number(this.value)>5){
+            this.value = 5
+            og_color[n] = this.style.backgroundColor
+            og_element[n] = this
+            this.style.backgroundColor = "red"
+            n++
+        }
+        if (Number(this.value)<0){
+            this.value = 0
+            og_color[n] = this.style.backgroundColor
+            og_element[n] = this
+            this.style.backgroundColor = "red"
+            n++
+        }
+    })
+}
