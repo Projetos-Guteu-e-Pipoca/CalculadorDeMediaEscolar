@@ -24,7 +24,7 @@
                                 target="_blank">danielcg1711</a></li>
                         <li>GitHub: <a href="https://github.com/Guteu" target="_blank">Guteu</a></li>
                     </ul>
-                    <h2 class="nome-contato cursor-pointer">Pipoca: <span class="seta-contato"></span></h2>
+    <h2 class="nome-contato cursor-pointer">Pipoca: <span class="seta-contato"></span></h2>
                     <ul class="texto-contato">
                         <li>Discord: daluncio4khd</li>
                         <li>Instagram: <a href="https://www.instagram.com/alanwangdsf/" target="_blank">alanwangdsf</a>
@@ -36,283 +36,203 @@
         <section>
             <div class="centralizado caixaUnidades">
                 <h1>Qual é a unidade do 1 Ano que você quer calcular a média?</h1>
-                <div class="centralizado" onchange="unidade()">
-                    <div>
-                        <input type="radio" name="unidade" id="unidade2" checked>
-                        <label for="unidade2">1 unidade</label>
-                    </div>
+                <div class="centralizado">
+                    Unidade:
+                    <select id="unidade">
+                        <option value="1" selected>1ª Unidade</option>
+                        <option value="2">2ª Unidade</option>
+                        <option value="3">3ª Unidade</option>
+                        <option value="4">4ª Unidade</option>
+                    </select>
                 </div>
             </div>
         </section>
         <div id="ano1-1">
-            <!--portugues matematica historia geografia fisica quimica biologia-->
-            <section>
-                <div class="tabelaResponsiva">
-                    <div class="centralizado">
-                        <table>
-                            <caption>Calcular média de Portugues, Matematica, Historia, Geografia, Fisica, Quimica e Biologia</caption>
-                            <thead>
-                                <tr>
-                                    <th>Matérias</th>
-                                    <th>AD</th>
-                                    <th>AO</th>
-                                    <th>Av. ENEM</th>
-                                    <th>Folha AZ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>Portugues</th>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="port-1 inputs-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+            <form id="calcularNota">
+                <!--portugues matematica historia geografia fisica quimica biologia-->
+                <section>
+                    <div class="tabelaResponsiva">
+                        <div class="centralizado">
+                            <table>
+                                <caption>Calcular média de Portugues, Matematica, Historia, Geografia, Fisica, Quimica e Biologia</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Matérias</th>
+                                        <th>AD</th>
+                                        <th>AO</th>
+                                        <th>Av. ENEM</th>
+                                        <th>Folha AZ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Portugues</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="port ad">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="port-1 inputs-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="5" placeholder="0" value="0" class="port ao">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="port-1 inputs-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="port enem">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="port-1 inputs-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="port az">
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Matematica</th>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 mat-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Matematica</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="mat ad">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 mat-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="5"  placeholder="0" value="0" class="mat ao">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 mat-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="mat enem">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 mat-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="mat az">
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>História</th>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 hist-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>História</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist ad">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 hist-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="5"  placeholder="0" value="0" class="hist ao">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 hist-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist enem">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 hist-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist az">
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Geografia</th>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 geo-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Geografia</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo ad">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 geo-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="5"  placeholder="0" value="0" class="geo ao">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 geo-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo enem">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 geo-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo az">
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Fisica</th>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 fis-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fisica</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis ad">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 fis-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="5"  placeholder="0" value="0" class="fis ao">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 fis-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis enem">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 fis-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis az">
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Quimica</th>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 qui-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Quimica</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="qui ad">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 qui-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="5" placeholder="0" value="0" class="qui ao">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 qui-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="qui enem">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 qui-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="qui az">
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Biologia</th>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 bio-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Biologia</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="bio ad">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 bio-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="5" placeholder="0" value="0" class="bio ao">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 bio-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="bio enem">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex">
-                                            <input type="number" class="inputs-1 bio-1">
-                                            <div class="hp-1">❗
-                                                <div class="hpt-1"></div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="number" min="0" max="10" placeholder="0" value="0" class="bio az">
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button onclick="calcular_1()">Calcular</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="submit" value="Calcular" />
+                        </div>
                     </div>
-                </div>
-            </section>
-
+                </section>
+            <form>
             <!--filosofia sociologia redação-->
             <section>
                 <div class="tabelaResponsiva">
@@ -342,34 +262,22 @@
                                 <th>Filosofia</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="fil-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ad">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="fil-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="5" placeholder="0" value="0" class="fil ao">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="fil-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enem">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="fil-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil az">
                                     </div>
                                 </td>
                             </tr>
@@ -377,34 +285,22 @@
                                 <th>Sociologia</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="soc-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ad">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="soc-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="5" placeholder="0" value="0" class="soc ao">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="soc-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enem">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="soc-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc az">
                                     </div>
                                 </td>
                             </tr>
@@ -412,18 +308,12 @@
                                 <th>Redação</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="red-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
-                                    </div>
+                                        <input type="number" min="0" max="5" placeholder="0" value="0" class="red ad">
+                                   </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" class="red-1 inputs-1">
-                                        <div class="hp-1">❗
-                                            <div class="hpt-1"></div>
-                                        </div>
+                                        <input type="number" min="0" max="5" placeholder="0" value="0" class="red ao">
                                     </div>
                                 </td>
                             </tr>
@@ -440,59 +330,59 @@
                             <tr>
                                 <th>Matérias</th>
                                 <th>Médias</th>
-                                <th>pp</th>
+                                <th>PP</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th>Portugues</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-port"></td>
+                                <td id="pp-port"></td>
                             </tr>
                             <tr>
                                 <th>Matematica</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-mat"></td>
+                                <td id="pp-mat"></td>
                             </tr>
                             <tr>
                                 <th>História</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-hist"></td>
+                                <td id="pp-hist"></td>
                             </tr>
                             <tr>
                                 <th>Geografia</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-geo"></td>
+                                <td id="pp-geo"></td>
                             </tr>
                             <tr>
                                 <th>Fisica</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-fis"></td>
+                                <td id="pp-fis"></td>
                             </tr>
                             <tr>
                                 <th>Quimica</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-qui"></td>
+                                <td id="pp-qui"></td>
                             </tr>
                             <tr>
                                 <th>Biologia</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-bio"></td>
+                                <td id="pp-bio"></td>
                             </tr>
                             <tr>
                                 <th>Filosofia</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-fil"></td>
+                                <td id="pp-fil"></td>
                             </tr>
                             <tr>
                                 <th>Sociologia</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-soc"></td>
+                                <td id="pp-soc"></td>
                             </tr>
                             <tr>
                                 <th>Redação</th>
-                                <td class="nota-1"></td>
-                                <td class="pp-1"></td>
+                                <td id="nota-red"></td>
+                                <td id="pp-red"></td>
                             </tr>
                         </tbody>
                     </table>
