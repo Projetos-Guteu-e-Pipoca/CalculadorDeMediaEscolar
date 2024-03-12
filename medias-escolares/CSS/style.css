@@ -9,17 +9,9 @@ body {
     background-color: rgb(0, 102, 0);
 }
 
-section {
-    margin-bottom: 15px;
-}
-
 a, a:visited {
     text-decoration: none;
     color: var(--cor-link);
-}
-
-button {
-    font-size: 25px;
 }
 
 h1 {
@@ -99,6 +91,7 @@ div.caixaEscolhas a {
 
 .tabelaResponsiva {
     overflow-x: auto;
+    margin-bottom: 15px;
 }
 
 .inputNota2U, .inputNota4U, .inputNota2U_M-4, .inputNota2U_M-5{

@@ -1,83 +1,103 @@
-function calcular_1() {
-    //calcular portugues
-    let notas_html = []
-    notas_html[0] = document.getElementsByClassName("port-1")
-    notas_html[1] = document.getElementsByClassName("mat-1")
-    notas_html[2] = document.getElementsByClassName("hist-1")
-    notas_html[3] = document.getElementsByClassName("geo-1")
-    notas_html[4] = document.getElementsByClassName("fis-1")
-    notas_html[5] = document.getElementsByClassName("qui-1")
-    notas_html[6] = document.getElementsByClassName("bio-1")
-    notas_html[7] = document.getElementsByClassName("fil-1")
-    notas_html[8] = document.getElementsByClassName("soc-1")
-    notas_html[9] = document.getElementsByClassName("red-1")
-    let notas = document.getElementsByClassName("nota-1")
+// um array com todas as matérias, nós vamos dar um loop nisso após o formulario ser enviado.
+const materias = [
+    "port",
+    "mat",
+    "hist",
+    "geo",
+    "fis",
+    "qui",
+    "bio",
+    "fil",
+    "soc",
+    "red"
+]
 
-    
-    for (let i=0; i<notas_html.length; i++){
-        if (i == 9){ //calcular redação
-            notas[i].innerText = Number(notas_html[9][0].value) + Number(notas_html[9][1].value)
-        } else{
-            notas[i].innerText = calcular_p_m_h_g_f_q_b_f_s(notas_html[i])
-        }
+// Um hash map com as formulas de cada unidade.
 
-        //deixar o numero verde ou vermelho dependendo da nota
-        if (Number(notas[i].innerText) < 6){
-            notas[i].style.color = "red"
-        } else{
-            notas[i].style.color = "green"
-        }
+const calculosBimestre = {
+    "1": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+    "2": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+    "3": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+    "4": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+}
+
+// Um hash map com os calulos diferentes.
+
+const calculosEspeciais = {
+    "red": {
+        "1": "notas.ad + notas.ao",
+        "2": "notas.ad + notas.ao",
+        "3": "notas.ad + notas.ao",
+        "4": "notas.ad + notas.ao"
     }
 }
 
-//calcular port mat hist geo fis qui fil soc
-function calcular_p_m_h_g_f_q_b_f_s(array){
-    let v = []
-    for (let i=0; i<array.length; i++){
-        v[i] = Number(array[i].value)
+const botaoCalcular = document.getElementById("calcularNota");
+
+botaoCalcular.addEventListener(
+    "submit",
+    function(ev) {
+        // Quando um formulário é enviado, a pagina recarrega para enviar os dados para um servidor (que nós não temos)
+        // Logo, preventDefault desativa esse comportamento.
+        ev.preventDefault();
+        // Dar loop pelas matérias.
+        materias.forEach(mostarNota)
+    },
+    {
+        // passive é false para não fazer a pagina recarregar após o envio do formulário (comportamento buxa do html)
+        passive: false
     }
-    return ((v[0]*4)+(v[1]*4)+v[2]+v[3])/10
+)
+
+function mostarNota(mat) {
+    /**
+     * Os inputs de uma matéria (em forma de coleção html)
+     * @type {HTMLCollectionOf<HTMLInputElement>}
+    */
+    const inputsHTML = document.getElementsByClassName(mat)
+
+    // Adiquirir a unidade.
+    const unidade = document.getElementById("unidade").value;
+
+    // Criar um hash map com as notas.
+    const notas = {}
+
+    for (input of inputsHTML) {
+        // Enche o hash map com informação ( {"NOME DA AVALIAÇÃO (ex.: enem)": NOTA} )
+        notas[input.className.split(" ")[1]] = parseFloat(input.value);
+    }
+
+    // Adiquirir o elemento da nota (ex.: port = <div id="nota-port"></div>)
+    const notaDisplay = document.getElementById(`nota-${mat}`)
+
+    // Mesma coisa porem com o PP.
+    const ppDisplay = document.getElementById(`pp-${mat}`)
+
+    let nota = 0;
+
+    // Se o hash map dos calculos especiais tiverem um elemento para aquela matéria E unidade:
+    if(calculosEspeciais[mat] !== undefined && calculosEspeciais[mat][unidade] !== undefined) {
+        // Rodar o calculo especial e guardar o resultado na variável nota.
+        nota = eval(calculosEspeciais[mat][unidade]);
+    } else {
+        // Caso contrário... Rodar o calculo normal.
+        nota = eval(calculosBimestre[unidade]);
+    }
+
+    // Alterar a nota final.
+
+    notaDisplay.innerText = nota.toFixed(2);
+    ppDisplay.innerText = nota.toFixed(2) * 10;
+
+    // Decidir as cores.
+
+    ppDisplay.style.color = nota.toFixed(2) * 10 >= 60 ? "green" : "red";
+    notaDisplay.style.color = nota.toFixed(2) >= 6 ? "green" : "red";
 }
 
-const hp = document.getElementsByClassName("hp-1")
-const hpt = document.getElementsByClassName("hpt-1")
-const inputs = document.getElementsByClassName("inputs-1")
-
-//helper text display
-for (let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener("input", function() {
-        const inputValue = parseFloat(this.value)
-        if (i==36 || i==37){
-            if (inputValue > 5 || inputValue < 0){
-                hp[i].style.display = "block"
-            }else{
-                hp[i].style.display = "none"
-            }
-        }else{
-        if (inputValue > 10 || inputValue < 0) {
-            hp[i].style.display = "block"
-        } else {
-            hp[i].style.display = "none"
-        }}
-    })
-    inputs[i].addEventListener("click", function() {
-        inputs[i].value = null
-    })
-    
-    hp[i].addEventListener("click", function(event) {
-        event.stopPropagation()
-        hpt[i].style.display = "block"
-        if (i==36 || i==37){
-            hpt[i].innerText = "Esta prova vale de 0 a 5"
-        }else{
-            hpt[i].innerText = "Esta prova vale de 0 a 10"
-        }
-    })
-
-    document.addEventListener("click", function() {
-        hpt[i].style.display = "none"
-    })
-}
+// Aqui teriamos a função que avisava que os valores inseridos estavam incorretos
+// porém inputs + um input de type "submit" já cuida de valores ilegais para nós, então
+// essa função foi de vasco!
 
 const setas_contato = document.getElementsByClassName("seta-contato")
 const texts_contato = document.getElementsByClassName("texto-contato")
