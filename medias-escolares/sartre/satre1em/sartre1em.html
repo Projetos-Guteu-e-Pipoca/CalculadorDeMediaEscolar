@@ -37,9 +37,9 @@
                     Unidade:
                     <select id="unidade">
                         <option value="1" selected>1ª Unidade</option>
-                        <!--<option value="2">2ª Unidade</option>-->
-                        <!--<option value="3">3ª Unidade</option>-->
-                        <!--<option value="4">4ª Unidade</option>-->
+                        <option value="2">2ª Unidade</option>
+                        <option value="3">3ª Unidade</option>
+                        <option value="4">4ª Unidade</option>
                     </select>
                 </div>
             </div>
@@ -105,13 +105,13 @@
                                         <input type="number" min="0" max="10"  placeholder="0" value="0" class="mat az">
                                     </div>
                                 </td>
-</tr>
+                            </tr>
                             <tr>
                                 <th>História</th>
-<td>
+                                <td>
                                     <div class="flex">
                                         <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist ad">
-    </div>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="flex">
@@ -234,7 +234,7 @@
                 <table>
                     <caption>Calcular média de Filosofia, Sociologia e Redação</caption>
                     <thead>
-                        <tr>
+                        <tr id="extrasMateriasHead">
                             <th>
                                 Matérias
                             </th>
@@ -252,65 +252,67 @@
                             </th>
                         </tr>
                     </thead>
-                    <tr>
-                        <th>Filosofia</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ad">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ao">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enem">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil az">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Sociologia</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ad">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ao">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enem">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc az">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Redação</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="red ad">
-                           </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="red ao">
-                            </div>
-                        </td>
-                    </tr>
+                    <tbody id="extrasMaterias">
+                        <tr>
+                            <th>Filosofia</th>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ad">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ao">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enem">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil az">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Sociologia</th>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ad">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ao">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enem">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc az">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Redação</th>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="red ad">
+                               </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="red ao">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -325,7 +327,7 @@
                         <th>PP</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="extrasNotas">
                     <tr>
                         <th>Portugues</th>
                         <td id="nota-port"></td>
@@ -385,4 +387,3 @@
 </body>
 
 </html>
-
