@@ -13,24 +13,21 @@
 <body>
     <main>
         <aside>
-            <div class="caixaContato">
+            <div class="caixaContato" id="caixaContato">
                 <h1>Contato:</h1>
-                    <h2 class="nome-contato cursor-pointer">Guteu: <span class="seta-contato"></span></h2>
-                    <ul class="texto-contato">
-                        <li>Discord: guteu_</li>
-                        <li>Canal no YouTube: <a href="https://www.youtube.com/channel/UCbprvYrUFBp2rOdwORzqHzQ"
-                                target="_blank">Guteu</a></li>
-                        <li>Instagram: <a href="https://www.instagram.com/danielcg1711/"
-                                target="_blank">danielcg1711</a></li>
-                        <li>GitHub: <a href="https://github.com/Guteu" target="_blank">Guteu</a></li>
-                    </ul>
-    <h2 class="nome-contato cursor-pointer">Pipoca: <span class="seta-contato"></span></h2>
-                    <ul class="texto-contato">
-                        <li>Discord: daluncio4khd</li>
-                        <li>Instagram: <a href="https://www.instagram.com/alanwangdsf/" target="_blank">alanwangdsf</a>
-                        </li>
-                        <li>GitHub: <a href="https://github.com/AlanWang2313" target="_blank">AlanWang2313</a></li>
-                    </ul>
+                <h2 class="nome-contato cursor-pointer">Guteu: <span class="fa-solid fa-arrow-down" id="seta-contato-guteu" /></h2>
+                <ul id="texto-contato-guteu" style="display: none;">
+                    <li>Discord: guteu_</li>
+                    <li>Canal no YouTube: <a href="https://www.youtube.com/channel/UCbprvYrUFBp2rOdwORzqHzQ" target="_blank">Guteu</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/danielcg1711/" target="_blank">danielcg1711</a></li>
+                    <li>GitHub: <a href="https://github.com/Guteu" target="_blank">Guteu</a></li>
+                </ul>
+                <h2 class="nome-contato cursor-pointer">Pipoca: <span class="fa-solid fa-arrow-down" id="seta-contato-pipoca" /></h2>
+                <ul id="texto-contato-pipoca" style="display: none;">
+                    <li>Discord: daluncio4khd</li>
+                    <li>Instagram: <a href="https://www.instagram.com/alanwangdsf/" target="_blank">alanwangdsf</a></li>
+                    <li>GitHub: <a href="https://github.com/AlanWang2313" target="_blank">AlanWang2313</a></li>
+                </ul>
             </div>
         </aside>
         <div class="tabelaResponsiva">
@@ -72,7 +69,7 @@
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="5" placeholder="0" value="0" class="port ao">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port ao">
                                     </div>
                                 </td>
                                 <td>
@@ -95,7 +92,7 @@
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="5"  placeholder="0" value="0" class="mat ao">
+                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="mat ao">
                                     </div>
                                 </td>
                                 <td>
@@ -118,7 +115,7 @@
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="5"  placeholder="0" value="0" class="hist ao">
+                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist ao">
                                     </div>
                                 </td>
                                 <td>
@@ -141,7 +138,7 @@
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="5"  placeholder="0" value="0" class="geo ao">
+                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo ao">
                                     </div>
                                 </td>
                                 <td>
@@ -164,7 +161,7 @@
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="5"  placeholder="0" value="0" class="fis ao">
+                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis ao">
                                     </div>
                                 </td>
                                 <td>
@@ -187,7 +184,7 @@
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="5" placeholder="0" value="0" class="qui ao">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui ao">
                                     </div>
                                 </td>
                                 <td>
@@ -210,7 +207,7 @@
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="5" placeholder="0" value="0" class="bio ao">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio ao">
                                     </div>
                                 </td>
                                 <td>
@@ -237,7 +234,7 @@
                 <table>
                     <caption>Calcular média de Filosofia, Sociologia e Redação</caption>
                     <thead>
-                        <tr>
+                        <tr id="extrasMateriasHead">
                             <th>
                                 Matérias
                             </th>
@@ -255,65 +252,67 @@
                             </th>
                         </tr>
                     </thead>
-                    <tr>
-                        <th>Filosofia</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ad">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="5" placeholder="0" value="0" class="fil ao">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enem">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil az">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Sociologia</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ad">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="5" placeholder="0" value="0" class="soc ao">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enem">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc az">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Redação</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="5" placeholder="0" value="0" class="red ad">
-                           </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="5" placeholder="0" value="0" class="red ao">
-                            </div>
-                        </td>
-                    </tr>
+                    <tbody id="extrasMaterias">
+                        <tr>
+                            <th>Filosofia</th>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ad">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ao">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enem">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="fil az">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Sociologia</th>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ad">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ao">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enem">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="soc az">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Redação</th>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="red ad">
+                               </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <input type="number" min="0" max="10" placeholder="0" value="0" class="red ao">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -328,7 +327,7 @@
                         <th>PP</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="extrasNotas">
                     <tr>
                         <th>Portugues</th>
                         <td id="nota-port"></td>
@@ -388,4 +387,3 @@
 </body>
 
 </html>
-
