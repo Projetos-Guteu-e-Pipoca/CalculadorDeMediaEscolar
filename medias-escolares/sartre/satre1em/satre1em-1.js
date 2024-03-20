@@ -1,5 +1,5 @@
 // um array com todas as matérias, nós vamos dar um loop nisso após o formulario ser enviado.
-const materias = [
+let materias = [
     "port",
     "mat",
     "hist",
@@ -11,6 +11,9 @@ const materias = [
     "soc",
     "red"
 ]
+
+// A length original do array de matérias
+const ogLength = materias.length;
 
 // Um hash map com as formulas de cada unidade.
 
@@ -39,6 +42,153 @@ const pesosUnidades = {
     "4": 3
 }
 
+// Coisas da unidade:
+
+const extrasDaUnidade = {
+    "1": [],
+    "2": [
+        {
+            tipo: "input",
+            dados: {
+                classeCrua: "hum",
+                classe: ["hum proj"],
+                minimo: [0],
+                maximo: [10],
+                nomeTable: "Humanidades",
+                displayNota: ["Projeto"],
+                materia: true
+            }
+        }
+    ],
+    "3": [],
+    "4": []
+}
+
+/** 
+ * isso é uma string já que o valor de `botaoUnidade.value` é também uma string.
+*/
+let unidade = "1";
+
+const extrasNotas = document.getElementById("extrasNotas");
+const extrasMaterias = document.getElementById("extrasMaterias");
+const extrasMateriasHead = document.getElementById("extrasMateriasHead");
+
+const botaoUnidade = document.getElementById("unidade");
+
+botaoUnidade.addEventListener("change", () => {
+    unidade = botaoUnidade.value;
+    mostrarExtras();
+})
+
+function mostrarExtras() {
+    // Apagar os extras
+    apagarMateriasExtras();
+
+    // Adiquirir um array com os extras da unidade.
+    const extra = extrasDaUnidade[unidade]
+    if(extra.length === 0) return;
+    
+    // Criar os extras
+    extra.forEach(verificarExtras);
+}
+
+function apagarMateriasExtras() {
+    // Caso uma materia nova tiver sido adicionada, remover ela!
+    materias = materias.slice(0, ogLength);
+    
+    // Juntar TODOS os elementos de lugares onde os extras podem estar.
+    const materiasExtras = Array.from(extrasMaterias.children).concat(Array.from(extrasNotas.children), Array.from(extrasMateriasHead.children));
+    for (let materia of materiasExtras) {
+        // Caso o elemento seja um extra, adeus!
+        if(materia.id === "extra") materia.remove();
+    }
+}
+
+function verificarExtras(extra) {
+    switch (extra.tipo) {
+        case "input":
+            const {dados} = extra
+
+            // Criar a tabela de nota que mostrará a nota da materia (APENAS SE PRECISAR!)
+            
+            if(dados.materia === true) {
+                let nota = document.createElement("tr");
+                nota.id = "extra"
+
+                let notaHead = document.createElement("th");
+                notaHead.innerText = dados.nomeTable
+
+                let media = document.createElement("td");
+                let pp = document.createElement("td");
+
+                media.id = `nota-${dados.classeCrua}`
+                pp.id = `pp-${dados.classeCrua}`
+
+                nota.append(notaHead, media, pp);
+
+                extrasNotas.append(nota);
+            }
+
+            const ogHeadLength = extrasMateriasHead.children.length - 1
+
+            // Criar os inputs
+
+            let inputHead = document.createElement("tr");
+            inputHead.id = "extra"
+
+            let materiaTh = document.createElement("th");
+            materiaTh.innerText = dados.nomeTable
+
+            inputHead.append(materiaTh) 
+
+            dados.classe.forEach((_classe, index) => {
+                let displayNota = dados.displayNota[index];
+
+                let materiaHead = document.createElement("th");
+                materiaHead.id = "extra"
+                materiaHead.innerText = displayNota
+
+                extrasMateriasHead.append(materiaHead);
+            })
+
+            for (let i = 0; i < ogHeadLength; i++) {
+                inputHead.append(document.createElement("td")); // Criar espaço ate a head correta.
+            }
+
+            dados.classe.forEach((classe, index) => {
+                let classeInput = document.createElement("td");
+
+                let divFlex = document.createElement("div");
+
+                divFlex.className = "flex"
+
+                let input = document.createElement("input");
+
+                input.className = classe
+
+                input.min = dados.minimo[index];
+                input.max = dados.maximo[index];
+
+                input.type = "number"
+                input.placeholder = "0"
+                input.value = "0"
+
+                divFlex.append(input);
+
+                classeInput.append(divFlex);
+
+                inputHead.append(classeInput)
+
+                extrasMaterias.append(inputHead);
+            })      
+        break;
+    }
+}
+
+// Chamar a func. caso tenha algum extra na 1ª unidade.
+mostrarExtras()
+
+// Coisas do calculo:
 const botaoCalcular = document.getElementById("calcularNota");
 
 botaoCalcular.addEventListener(
@@ -62,9 +212,6 @@ function mostarNota(mat) {
      * @type {HTMLCollectionOf<HTMLInputElement>}
     */
     const inputsHTML = document.getElementsByClassName(mat)
-
-    // Adiquirir a unidade.
-    const unidade = document.getElementById("unidade").value;
 
     // Criar um hash map com as notas.
     const notas = {}
