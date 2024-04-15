@@ -1,0 +1,29 @@
+:root {
+    /*default*/
+    --default-header-text-size: 42px;
+    --default-title-size: 34px;
+    --default-subtitle-size: 28px;
+    --default-text-size: 25px;
+
+    /*mobile*/
+    --mobile-header-text-size: 32px;
+    --mobile-title-size: 24px;
+    --mobile-subtitle-size: 21px;
+    --mobile-text-size: 18px;
+}
+
+/*
+min-width: x; //funciona entre x e adiante 
+
+max-width: x; //funciona entre 0 e x
+*/
+
+/*mobile vertical*/
+@media (max-width: 840px) {
+    :root {
+     --default-header-text-size: var(--mobile-header-text-size);
+     --default-title-size: var(--mobile-title-size);
+     --default-subtitle-size: var(--mobile-subtitle-size);
+     --default-text-size: var(--mobile-text-size);
+   }
+ }

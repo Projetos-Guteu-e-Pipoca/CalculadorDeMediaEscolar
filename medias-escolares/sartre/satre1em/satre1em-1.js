@@ -16,9 +16,9 @@ const materias = [
 
 const calculosBimestre = {
     "1": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-    "2": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-    "3": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-    "4": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+    //"2": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+    //"3": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+    //"4": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
 }
 
 // Um hash map com os calulos diferentes.
@@ -26,9 +26,9 @@ const calculosBimestre = {
 const calculosEspeciais = {
     "red": {
         "1": "notas.ad + notas.ao",
-        "2": "notas.ad + notas.ao",
-        "3": "notas.ad + notas.ao",
-        "4": "notas.ad + notas.ao"
+        //"2": "notas.ad + notas.ao",
+        //"3": "notas.ad + notas.ao",
+        //"4": "notas.ad + notas.ao"
     }
 }
 
@@ -40,6 +40,7 @@ botaoCalcular.addEventListener(
         // Quando um formulário é enviado, a pagina recarrega para enviar os dados para um servidor (que nós não temos)
         // Logo, preventDefault desativa esse comportamento.
         ev.preventDefault();
+
         // Dar loop pelas matérias.
         materias.forEach(mostarNota)
     },
@@ -58,6 +59,7 @@ function mostarNota(mat) {
 
     // Adiquirir a unidade.
     const unidade = document.getElementById("unidade").value;
+    console.log(unidade)
 
     // Criar um hash map com as notas.
     const notas = {}
@@ -87,12 +89,8 @@ function mostarNota(mat) {
     // Alterar a nota final.
 
     notaDisplay.innerText = nota.toFixed(2);
-    ppDisplay.innerText = nota.toFixed(2) * 10;
-
-    // Decidir as cores.
-
-    ppDisplay.style.color = nota.toFixed(2) * 10 >= 60 ? "green" : "red";
-    notaDisplay.style.color = nota.toFixed(2) >= 6 ? "green" : "red";
+    //para mudar o calculo do pp baseado no peso da unidade
+    ppDisplay.innerText = unidade == 1 || unidade == 3 ? nota.toFixed(2) * 2 : nota.toFixed(2) * 3;
 }
 
 // Aqui teriamos a função que avisava que os valores inseridos estavam incorretos

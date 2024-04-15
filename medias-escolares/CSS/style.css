@@ -16,7 +16,7 @@ a, a:visited {
 
 h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: var(--default-title-size);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -25,7 +25,7 @@ h1 {
 
 header h1 {
     color: white;
-    font-size: 45px;
+    font-size: var(--default-header-text-size);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -45,12 +45,13 @@ header h1 {
 
 
 div.caixaContato h1{
-    font-size: 40px;
+    font-size: var(--default-title-size);
     margin: 0%;
 }
 
 div.caixaContato h2{
     margin: 0;
+    font-size: var(--default-subtitle-size);
 }
 
 div.caixaContato li{
@@ -69,7 +70,7 @@ div.caixaContato li{
 }
 
 div.caixaEscolhas a {
-    font-size: 30px;
+    font-size: var(--default-text-size);
     display: inline-block;
     background-color: rgb(214, 214, 214);
     padding: 3px;
