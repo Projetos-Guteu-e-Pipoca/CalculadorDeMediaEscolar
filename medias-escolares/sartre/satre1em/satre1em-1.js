@@ -25,7 +25,7 @@ const calculosBimestre = {
 
 const calculosEspeciais = {
     "red": {
-        "1": "notas.ad + notas.ao",
+        "1": "(notas.ad + notas.ao) / 2",
         //"2": "notas.ad + notas.ao",
         //"3": "notas.ad + notas.ao",
         //"4": "notas.ad + notas.ao"
