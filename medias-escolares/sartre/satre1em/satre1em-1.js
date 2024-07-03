@@ -1,3 +1,18 @@
+function mudançasUnidade() {
+    const unidade = document.getElementById("unidade").value;
+    let ph = document.getElementById("projetoHumanidades")
+
+    switch(unidade) {
+        case "1":
+            ph.style.display = "none"
+            break
+        case "2":
+            ph.style.display = "block"
+            break
+    }
+}
+mudançasUnidade()
+
 // um array com todas as matérias, nós vamos dar um loop nisso após o formulario ser enviado.
 const materias = [
     "port",
@@ -16,7 +31,7 @@ const materias = [
 
 const calculosBimestre = {
     "1": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-    //"2": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+    "2": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
     //"3": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
     //"4": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
 }
@@ -26,9 +41,24 @@ const calculosBimestre = {
 const calculosEspeciais = {
     "red": {
         "1": "(notas.ad + notas.ao) / 2",
-        //"2": "notas.ad + notas.ao",
+        "2": "notas.ad + notas.ao",
         //"3": "notas.ad + notas.ao",
         //"4": "notas.ad + notas.ao"
+    },
+    "port": {
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+    },
+    "hist": {
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+    },
+    "geo": {
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+    },
+    "fil": {
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+    },
+    "soc": {
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
     }
 }
 
@@ -41,7 +71,7 @@ botaoCalcular.addEventListener(
         // Logo, preventDefault desativa esse comportamento.
         ev.preventDefault();
 
-        // Dar loop pelas matérias.
+        // Dar loop pelas matérias.7iuyhj  
         materias.forEach(mostarNota)
     },
     {
@@ -66,7 +96,17 @@ function mostarNota(mat) {
 
     for (input of inputsHTML) {
         // Enche o hash map com informação ( {"NOME DA AVALIAÇÃO (ex.: enem)": NOTA} )
-        notas[input.className.split(" ")[1]] = parseFloat(input.value);
+        if (input.value == '') { //se deixar o input em branco ele vai virar um 0
+            notas[input.className.split(" ")[1]] = 0;
+        } else {
+            notas[input.className.split(" ")[1]] = parseFloat(input.value);
+        }
+    }
+
+    //se for a 2 unidade, então ele pega o projeto humanidades
+    if(unidade == 2){
+        let projetoH = document.getElementsByClassName("ph")
+        notas["ph"] = parseFloat(projetoH[0].value)
     }
 
     // Adiquirir o elemento da nota (ex.: port = <div id="nota-port"></div>)
@@ -90,7 +130,14 @@ function mostarNota(mat) {
 
     notaDisplay.innerText = nota.toFixed(2);
     //para mudar o calculo do pp baseado no peso da unidade
-    ppDisplay.innerText = unidade == 1 || unidade == 3 ? nota.toFixed(2) * 2 : nota.toFixed(2) * 3;
+    ppDisplay.innerText = unidade == 1 || unidade == 3 ? (nota.toFixed(2) * 2).toFixed(2) : (nota.toFixed(2) * 3).toFixed(2);
+
+    //mudar a cor da nota baseada na nota
+    if(parseFloat(notaDisplay.innerText) >= 6){
+        notaDisplay.style.color = "green"
+    } else {
+        notaDisplay.style.color = "red"
+    }
 }
 
 // Aqui teriamos a função que avisava que os valores inseridos estavam incorretos

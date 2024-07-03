@@ -25,7 +25,7 @@
                                 target="_blank">guteu_daniel</a></li>
                         <li>GitHub: <a href="https://github.com/Guteu" target="_blank">Guteu</a></li>
                     </ul>
-    <h2 class="nome-contato cursor-pointer">Pipoca / Alan Wang: <span class="seta-contato"></span></h2>
+    <h2 class="nome-contato cursor-pointer">Alan Wang: <span class="seta-contato"></span></h2>
                     <ul class="texto-contato">
                         <li>Discord: daluncio4khd</li>
                         <li>Instagram: <a href="https://www.instagram.com/alanwangdsf/" target="_blank">alanwangdsf</a>
@@ -39,14 +39,24 @@
                 <h1>Qual é a unidade do 1 Ano que você quer calcular a média?</h1>
                 <div class="centralizado">
                     Unidade:
-                    <select id="unidade">
+                    <select id="unidade" onchange="mudançasUnidade()">
                         <option value="1" selected>1ª Unidade</option>
-                        <!--<option value="2">2ª Unidade</option>-->
+                        <option value="2">2ª Unidade</option>
                     </select>
                 </div>
             </div>
         </div>
+
         <form id="calcularNota">
+            <div id="projetoHumanidades" class="tabelaResponsiva" style="display: none;">
+                <div class="centralizado">
+                    <table>
+                        <th>Projeto Humanidades</th>
+                        <td><input type="number" min="0" max="2" placeholder="0" value="0" class="ph ph" step="any"></td>
+                    </table>
+                </div>
+            </div>
+
             <!--portugues matematica historia geografia fisica quimica biologia-->
             <div class="tabelaResponsiva">
                 <div class="centralizado">
