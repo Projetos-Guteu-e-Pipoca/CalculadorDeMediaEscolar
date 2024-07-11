@@ -9,6 +9,9 @@ function mudançasUnidade() {
         case "2":
             ph.style.display = "block"
             break
+        case "3":
+            ph.style.display = "block"
+            break
     }
 }
 mudançasUnidade()
@@ -32,7 +35,7 @@ const materias = [
 const calculosBimestre = {
     "1": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
     "2": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-    //"3": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+    "3": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
     //"4": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
 }
 
@@ -41,24 +44,29 @@ const calculosBimestre = {
 const calculosEspeciais = {
     "red": {
         "1": "(notas.ad + notas.ao) / 2",
-        "2": "notas.ad + notas.ao",
-        //"3": "notas.ad + notas.ao",
+        "2": "((notas.ad + notas.ph) + notas.ao) / 2",
+        "3": "(((notas.ad + notas.ph) / 2) + notas.ao) / 2",
         //"4": "notas.ad + notas.ao"
     },
     "port": {
-        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10"
     },
     "hist": {
-        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10"
     },
     "geo": {
-        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10"
     },
     "fil": {
-        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10"
     },
     "soc": {
-        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+        "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
+        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10"
     }
 }
 
@@ -103,8 +111,8 @@ function mostarNota(mat) {
         }
     }
 
-    //se for a 2 unidade, então ele pega o projeto humanidades
-    if(unidade == 2){
+    //se for a 2 ou 3 unidade, então ele pega o projeto humanidades
+    if(unidade == 2 || unidade == 3){
         let projetoH = document.getElementsByClassName("ph")
         notas["ph"] = parseFloat(projetoH[0].value)
     }
