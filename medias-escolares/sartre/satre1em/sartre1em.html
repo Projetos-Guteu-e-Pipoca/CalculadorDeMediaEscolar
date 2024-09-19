@@ -16,22 +16,22 @@
         <aside>
             <div class="caixaContato">
                 <h1>Contato:</h1>
-                    <h2 class="nome-contato cursor-pointer">Guteu / Daniel Guerra: <span class="seta-contato"></span></h2>
-                    <ul class="texto-contato">
-                        <li>Discord: guteu_</li>
-                        <li>Canal no YouTube: <a href="https://www.youtube.com/channel/UCbprvYrUFBp2rOdwORzqHzQ"
-                                target="_blank">Guteu</a></li>
-                        <li>Instagram: <a href="https://www.instagram.com/guteu_daniel/"
-                                target="_blank">guteu_daniel</a></li>
-                        <li>GitHub: <a href="https://github.com/Guteu" target="_blank">Guteu</a></li>
-                    </ul>
-    <h2 class="nome-contato cursor-pointer">Alan Wang: <span class="seta-contato"></span></h2>
-                    <ul class="texto-contato">
-                        <li>Discord: daluncio4khd</li>
-                        <li>Instagram: <a href="https://www.instagram.com/alanwangdsf/" target="_blank">alanwangdsf</a>
-                        </li>
-                        <li>GitHub: <a href="https://github.com/AlanWang2313" target="_blank">AlanWang2313</a></li>
-                    </ul>
+                <h2 class="nome-contato cursor-pointer">Guteu / Daniel Guerra: <span class="seta-contato"></span></h2>
+                <ul class="texto-contato">
+                    <li>Discord: guteu_</li>
+                    <li>Canal no YouTube: <a href="https://www.youtube.com/channel/UCbprvYrUFBp2rOdwORzqHzQ"
+                            target="_blank">Guteu</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/guteu_daniel/" target="_blank">guteu_daniel</a>
+                    </li>
+                    <li>GitHub: <a href="https://github.com/Guteu" target="_blank">Guteu</a></li>
+                </ul>
+                <h2 class="nome-contato cursor-pointer">Alan Wang: <span class="seta-contato"></span></h2>
+                <ul class="texto-contato">
+                    <li>Discord: daluncio4khd</li>
+                    <li>Instagram: <a href="https://www.instagram.com/alanwangdsf/" target="_blank">alanwangdsf</a>
+                    </li>
+                    <li>GitHub: <a href="https://github.com/AlanWang2313" target="_blank">AlanWang2313</a></li>
+                </ul>
             </div>
         </aside>
         <div class="tabelaResponsiva">
@@ -43,8 +43,9 @@
                         <option value="1" selected>1ª Unidade</option>
                         <option value="2">2ª Unidade</option>
                         <option value="3">3ª Unidade</option>
+                        <option value="4">4ª Unidade</option>
                     </select>
-                    <p>Ultima atualização dos cálculos: 11/07/2024</p>
+                    <p>Ultima atualização dos cálculos: 19/09/2024</p>
                 </div>
             </div>
         </div>
@@ -54,7 +55,8 @@
                 <div class="centralizado">
                     <table>
                         <th>Projeto Humanidades</th>
-                        <td><input type="number" min="0" max="10" placeholder="0" value="0" class="ph ph" step="any"></td>
+                        <td><input type="number" min="0" max="10" placeholder="0" value="0" class="ph ph" step="any">
+                        </td>
                     </table>
                 </div>
             </div>
@@ -63,7 +65,8 @@
             <div class="tabelaResponsiva">
                 <div class="centralizado">
                     <table>
-                        <caption>Calcular média de Portugues, Matematica, Historia, Geografia, Fisica, Quimica e Biologia</caption>
+                        <caption>Calcular média de Portugues, Matematica, Historia, Geografia, Fisica, Quimica e
+                            Biologia</caption>
                         <thead>
                             <tr>
                                 <th>Matérias / Provas</th>
@@ -71,6 +74,7 @@
                                 <th>AO</th>
                                 <th>Av. ENEM</th>
                                 <th>Folha AZ</th>
+                                <th class="uni4">S. ENEM Nac</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,22 +82,32 @@
                                 <th>Portugues</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port ad" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port ad"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port ao" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port ao"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port enem" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0"
+                                            class="port enem" step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port az" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="port enemNacional"
+                                            step="any">
                                     </div>
                                 </td>
                             </tr>
@@ -101,22 +115,32 @@
                                 <th>Matematica</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="mat ad"  step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="mat ad"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="mat ao" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="mat ao"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="mat enem" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="mat enem"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="mat az" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="mat az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="mat enemNacional"
+                                            step="any">
                                     </div>
                                 </td>
                             </tr>
@@ -124,22 +148,32 @@
                                 <th>História</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist ad" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="hist ad"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist ao" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="hist ao"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist enem" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0"
+                                            class="hist enem" step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="hist az" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="hist az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="hist enemNacional"
+                                            step="any">
                                     </div>
                                 </td>
                             </tr>
@@ -147,22 +181,32 @@
                                 <th>Geografia</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo ad" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="geo ad"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo ao" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="geo ao"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo enem" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="geo enem"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="geo az" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="geo az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="geo enemNacional"
+                                            step="any">
                                     </div>
                                 </td>
                             </tr>
@@ -170,22 +214,32 @@
                                 <th>Fisica</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis ad" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fis ad"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis ao" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fis ao"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis enem" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fis enem"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10"  placeholder="0" value="0" class="fis az" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fis az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fis enemNacional"
+                                            step="any">
                                     </div>
                                 </td>
                             </tr>
@@ -193,22 +247,32 @@
                                 <th>Quimica</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui ad" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui ad"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui ao" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui ao"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui enem" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui enem"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui az" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="qui enemNacional"
+                                            step="any">
                                     </div>
                                 </td>
                             </tr>
@@ -216,22 +280,32 @@
                                 <th>Biologia</th>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio ad" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio ad"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio ao" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio ao"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio enem" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio enem"
+                                            step="any">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="flex">
-                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio az" step="any">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="bio enemNacional"
+                                            step="any">
                                     </div>
                                 </td>
                             </tr>
@@ -240,163 +314,185 @@
                     <input type="submit" value="Calcular" />
                 </div>
             </div>
-        <form>
-        <!--filosofia sociologia redação-->
-        
-        <div class="tabelaResponsiva">
-            <div class="centralizado">
-                <table>
-                    <caption>Calcular média de Filosofia, Sociologia e Redação</caption>
-                    <thead>
-                        <tr>
-                            <th>
-                                Matérias / Provas
-                            </th>
-                            <th>
-                                AP / Av1
-                            </th>
-                            <th>
-                                AO / Av1
-                            </th>
-                            <th>
-                                Av. ENEM
-                            </th>
-                            <th>
-                                Folha AZ
-                            </th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <th>Filosofia</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ad" step="any">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ao" step="any">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enem" step="any">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="fil az" step="any">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Sociologia</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ad" step="any">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ao" step="any">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enem" step="any">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="soc az" step="any">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Redação</th>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="red ad" step="any">
-                           </div>
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <input type="number" min="0" max="10" placeholder="0" value="0" class="red ao" step="any">
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+            <form>
 
-        <div class="centralizado tabelaResponsiva">
-            <table>
-                <caption>Resultados:</caption>
-                <thead>
-                    <tr>
-                        <th>Matérias</th>
-                        <th>Médias</th>
-                        <th>PP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Portugues</th>
-                        <td id="nota-port"></td>
-                        <td id="pp-port"></td>
-                    </tr>
-                    <tr>
-                        <th>Matematica</th>
-                        <td id="nota-mat"></td>
-                        <td id="pp-mat"></td>
-                    </tr>
-                    <tr>
-                        <th>História</th>
-                        <td id="nota-hist"></td>
-                        <td id="pp-hist"></td>
-                    </tr>
-                    <tr>
-                        <th>Geografia</th>
-                        <td id="nota-geo"></td>
-                        <td id="pp-geo"></td>
-                    </tr>
-                    <tr>
-                        <th>Fisica</th>
-                        <td id="nota-fis"></td>
-                        <td id="pp-fis"></td>
-                    </tr>
-                    <tr>
-                        <th>Quimica</th>
-                        <td id="nota-qui"></td>
-                        <td id="pp-qui"></td>
-                    </tr>
-                    <tr>
-                        <th>Biologia</th>
-                        <td id="nota-bio"></td>
-                        <td id="pp-bio"></td>
-                    </tr>
-                    <tr>
-                        <th>Filosofia</th>
-                        <td id="nota-fil"></td>
-                        <td id="pp-fil"></td>
-                    </tr>
-                    <tr>
-                        <th>Sociologia</th>
-                        <td id="nota-soc"></td>
-                        <td id="pp-soc"></td>
-                    </tr>
-                    <tr>
-                        <th>Redação</th>
-                        <td id="nota-red"></td>
-                        <td id="pp-red"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                <!--filosofia sociologia redação-->
+                <div class="tabelaResponsiva">
+                    <div class="centralizado">
+                        <table>
+                            <caption>Calcular média de Filosofia, Sociologia e Redação</caption>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Matérias / Provas
+                                    </th>
+                                    <th>
+                                        AP / Av1
+                                    </th>
+                                    <th>
+                                        AO / Av1
+                                    </th>
+                                    <th>
+                                        Av. ENEM
+                                    </th>
+                                    <th>
+                                        Folha AZ
+                                    </th>
+                                    <th class="uni4">S. ENEM Nac</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <th>Filosofia</th>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ad"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil ao"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enem"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="fil enemNacional"
+                                            step="any">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Sociologia</th>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ad"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc ao"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enem"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc az"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td class="uni4">
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="soc enemNacional"
+                                            step="any">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Redação</th>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="red ad"
+                                            step="any">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="number" min="0" max="10" placeholder="0" value="0" class="red ao"
+                                            step="any">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="centralizado tabelaResponsiva">
+                    <table>
+                        <caption>Resultados:</caption>
+                        <thead>
+                            <tr>
+                                <th>Matérias</th>
+                                <th>Médias</th>
+                                <th>PP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Portugues</th>
+                                <td id="nota-port"></td>
+                                <td id="pp-port"></td>
+                            </tr>
+                            <tr>
+                                <th>Matematica</th>
+                                <td id="nota-mat"></td>
+                                <td id="pp-mat"></td>
+                            </tr>
+                            <tr>
+                                <th>História</th>
+                                <td id="nota-hist"></td>
+                                <td id="pp-hist"></td>
+                            </tr>
+                            <tr>
+                                <th>Geografia</th>
+                                <td id="nota-geo"></td>
+                                <td id="pp-geo"></td>
+                            </tr>
+                            <tr>
+                                <th>Fisica</th>
+                                <td id="nota-fis"></td>
+                                <td id="pp-fis"></td>
+                            </tr>
+                            <tr>
+                                <th>Quimica</th>
+                                <td id="nota-qui"></td>
+                                <td id="pp-qui"></td>
+                            </tr>
+                            <tr>
+                                <th>Biologia</th>
+                                <td id="nota-bio"></td>
+                                <td id="pp-bio"></td>
+                            </tr>
+                            <tr>
+                                <th>Filosofia</th>
+                                <td id="nota-fil"></td>
+                                <td id="pp-fil"></td>
+                            </tr>
+                            <tr>
+                                <th>Sociologia</th>
+                                <td id="nota-soc"></td>
+                                <td id="pp-soc"></td>
+                            </tr>
+                            <tr>
+                                <th>Redação</th>
+                                <td id="nota-red"></td>
+                                <td id="pp-red"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
     </main>
     <script src="https://kit.fontawesome.com/a93427679b.js" crossorigin="anonymous"></script>
     <script src="satre1em-1.js"></script>
 </body>
 
 </html>
-

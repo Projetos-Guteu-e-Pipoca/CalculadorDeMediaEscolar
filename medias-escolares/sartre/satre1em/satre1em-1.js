@@ -1,21 +1,3 @@
-function mudançasUnidade() {
-    const unidade = document.getElementById("unidade").value;
-    let ph = document.getElementById("projetoHumanidades")
-
-    switch(unidade) {
-        case "1":
-            ph.style.display = "none"
-            break
-        case "2":
-            ph.style.display = "block"
-            break
-        case "3":
-            ph.style.display = "block"
-            break
-    }
-}
-mudançasUnidade()
-
 // um array com todas as matérias, nós vamos dar um loop nisso após o formulario ser enviado.
 const materias = [
     "port",
@@ -36,7 +18,8 @@ const calculosBimestre = {
     "1": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
     "2": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
     "3": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-    //"4": "( ( notas.ad * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10"
+    //"4": "notas.ad * 10"
+    "4": "( ( notas.ad * 4 ) + ( notas.ao * 3 ) + notas.enemNacional + notas.enem + notas.az ) / 10"
 }
 
 // Um hash map com os calulos diferentes.
@@ -46,7 +29,7 @@ const calculosEspeciais = {
         "1": "(notas.ad + notas.ao) / 2",
         "2": "((notas.ad + notas.ph) + notas.ao) / 2",
         "3": "(((notas.ad + notas.ph) / 2) + notas.ao) / 2",
-        //"4": "notas.ad + notas.ao"
+        "4": "(notas.ad + notas.ao) / 2"
     },
     "port": {
         "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
@@ -62,11 +45,12 @@ const calculosEspeciais = {
     },
     "fil": {
         "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10"
+        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10",
+        "4": "( ( notas.ad * 4 ) + ( notas.ao * 3 ) + notas.enemNacional + notas.enem + notas.az ) / 10"
     },
     "soc": {
         "2": "( ((notas.ph + notas.ad) * 4 ) + ( notas.ao * 4 ) + notas.enem + notas.az ) / 10",
-        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10"
+        "3": "( (((notas.ad + notas.ph) / 2) * 4 ) + (notas.ao * 4) + notas.enem + notas.az ) / 10",
     }
 }
 
@@ -147,6 +131,42 @@ function mostarNota(mat) {
         notaDisplay.style.color = "red"
     }
 }
+
+function mudançasUnidade() {
+    const unidade = document.getElementById("unidade").value;
+    let ph = document.getElementById("projetoHumanidades")
+    let unidade4 = document.getElementsByClassName("uni4");
+
+    materias.forEach(mostarNota)
+
+    switch(unidade) {
+        case "1":
+            ph.style.display = "none"
+            for (let i = 0; i < unidade4.length; i++) {
+                unidade4[i].style.display = "none";   
+            }
+            break
+        case "2":
+            ph.style.display = "block"
+            for (let i = 0; i < unidade4.length; i++) {
+                unidade4[i].style.display = "none";   
+            }
+            break
+        case "3":
+            ph.style.display = "block"
+            for (let i = 0; i < unidade4.length; i++) {
+                unidade4[i].style.display = "none";   
+            }
+            break
+        case "4":
+            ph.style.display = "none";
+            for (let i = 0; i < unidade4.length; i++) {
+                unidade4[i].style.display = "table-cell";   
+            }
+            break
+    }
+}
+mudançasUnidade()
 
 // Aqui teriamos a função que avisava que os valores inseridos estavam incorretos
 // porém inputs + um input de type "submit" já cuida de valores ilegais para nós, então
